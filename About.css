@@ -1,0 +1,143 @@
+:root{
+   --BG-COLOR:#3586ff;
+}
+
+#ab{
+  
+    width: 100%;
+    height: 70vh;
+    margin-top: 5%;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin: 0 auto;
+}
+ .card{color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 45%;
+    min-height:360px;
+    margin: 2.5%;
+    position: relative;
+    background-color: black;
+ }
+ .card:hover::before{
+    opacity: 1;
+ }
+ .card::before{
+    background: radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y),rgba(6, 210, 237, 0.282),transparent 40%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 500ms;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+ }
+.shap-bouble{
+   
+   width: 45%;
+   margin: 2.5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.shap-bouble .hexagon{
+   display: flex;
+
+}
+p{
+  margin: 0 auto; 
+display: flex;
+justify-content: center;
+align-items: center;
+   /* color: rgb(255, 255, 255); */
+   background-color: black;
+   font-size: 1.1rem;
+   padding: 20px;
+   letter-spacing: 0.1rem;
+}
+.shap-bouble .hexagon .shape{
+   position: relative;
+   width: 180px;
+   height: 180px;
+   margin: 0 5px;
+   clip-path: polygon(0 25%,50% 0,100% 25%,100% 75%,50% 100%,0 75%);
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   cursor: pointer;
+   transition: 0.5s;
+}
+.shap-bouble .hexagon .shape img{
+   background: cover;
+   width: 200px;
+   height: 250px;
+   
+}
+
+.last{
+   transform: translateY(-35px);
+   background: transparent;
+}
+.shap-bouble .hexagon .shape:hover{
+transform: scale(0.9);
+
+}
+
+
+@media only screen and (max-width:1250px){
+.card{
+    width: 90%;
+    margin-bottom: 20px;
+}
+.last{
+   transform: translateY(0px);
+   background: transparent;
+}  
+.shap-bouble{
+   width: 95%;
+} 
+.about{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+flex-wrap: wrap;
+}
+.shap-bouble .hexagon .shape{
+   width: 180px;
+   height: 180px;
+}
+.shap-bouble .hexagon .shape img{
+   background: cover;
+   width: 180px;
+   height: 180px;
+}
+}
+@media only screen and (max-width:450px){
+   .last{
+      transform: translateY(-25px);
+      background: transparent;
+   }
+   .shap-bouble .hexagon .shape{
+      width: 100px;
+      height: 120px;
+   }
+   .shap-bouble .hexagon .shape img{
+      background: cover;
+      width: 100px;
+      height: 120px;
+   }
+}

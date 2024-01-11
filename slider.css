@@ -1,0 +1,36 @@
+.slider{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 90%;
+    margin: 0 auto; 
+    padding: 0.2%;
+   
+}
+.carousel{
+    margin: 0 auto; 
+    width: 100%;
+}
+.carousel-indicators{
+    background: transparent;
+}
+.carousel-indicators [data-bs-target] {
+    background: var(--BG-COLOR);
+}
+.carousel-item img{
+    height: 80vh;
+}
+@media only screen and (max-width:1050px){
+    .carousel-item img{
+        height: 45vh;
+    } 
+    .item{
+        
+    }
+}
+@media only screen and (max-width:450px){
+    .carousel-item img{
+       height: 30vh;
+    }
+    .slider{
+width: 100%;
+    }
+}

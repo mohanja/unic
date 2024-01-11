@@ -1,0 +1,155 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ 
+   
+  }
+:root{
+   --BG-COLOR:#3586ff;
+}
+ header nav{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  header nav .logo img{
+width: 120px;
+height: 120px;
+   
+  }
+  header nav ul{
+  margin-bottom: 0px;
+    margin-right: 20px;
+  }
+  header nav li{
+display: inline;
+align-items: center;
+margin-left: 30px;
+ list-style: none;
+ font-size:1.2rem;
+ text-transform: capitalize;
+ border-radius: 50px;
+ padding: 8px 25pxpx;
+
+ }
+ header nav li a{
+   position: relative;
+    text-decoration: none;
+    background:var(--BG-COLOR);
+    width: 100%;
+    padding:8px 25px;
+    border-radius:49.5px ;
+    font-weight: 600;
+    color: black;
+ }
+ header nav li:hover{
+   color: white;
+ }
+ header nav li a:hover{
+   color: white;
+ }
+ 
+
+ header nav li a span{
+   background-color:transparent;
+    width: 100%;
+   position: relative;
+   z-index: 1;
+   padding: 3px 23px;
+ }
+ header nav li a span:hover{
+color: white;
+
+ }
+ header nav li a::before{
+   content: '';
+   position: absolute;
+   inset: 2px;
+   background-color:rgb(255, 255, 255);
+   border-radius: 48px;
+   transition: 0.5s;
+}
+header nav li a:hover::before{
+   opacity: 0.7;
+  
+}
+header nav li a::after{
+   content: '';
+   position: absolute;
+   inset: 0px;
+   background:var(--BG-COLOR);
+   border-radius: 48px;
+   transition: 0.5s;
+   opacity: 0;
+}
+ 
+header nav li a:hover::after{
+   opacity: 1;
+}
+
+ .menu-icon{
+    display: none;
+    width: 36px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+ }
+ .icon{
+    content: '';
+    width: 100%;
+    height: 5px;
+    border-radius: 50px;
+    background: var(--BG-COLOR);
+    margin-top:7.5px ;
+ }
+ .icon:first-child{
+    margin-top:0px;
+ }
+
+
+ @media only screen and (max-width:1050px){
+   header nav{
+    display: flex;
+    align-items: center;
+      margin-top: 0px;
+   }
+    header nav ul{
+        display: none;
+        position:relative;
+        /* width: 100%; */
+        margin: 0;
+        margin-top: 100px;
+        
+    }
+     .open{
+      display:block;
+      
+    }
+    .logo{
+     align-self: self-start;  
+
+    }
+    header nav li{
+      margin-left: 0px;
+   display: block;
+  margin-bottom:24px;
+  text-align: center;
+   }
+   
+    .menu-icon{
+        display: block;
+       align-self: self-start;
+     margin-top:45px;
+     margin-right:25px;
+    }
+    header nav li a{
+        padding:8px 20px;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+ }
+
